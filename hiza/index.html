@@ -474,6 +474,22 @@ details.area-item .who-list{padding:0 20px 18px 50px;}
 .visit-card{background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-m);padding:18px 20px;}
 .visit-card h3{font-size:.98rem;margin-bottom:6px;}
 .visit-card p{font-size:.86rem;color:var(--ink-soft);}
+
+/* ---------- PC表示の横幅を640pxにそろえる（スマホ表示は変更なし） ---------- */
+@media (min-width:700px){
+  :root{--col:640px;}
+  main .wrap,.hero .wrap,.site-header .wrap,.mini-nav .wrap{max-width:var(--col);padding-inline:0;}
+  main > section > :not(.wrap){max-width:var(--col);margin-inline:auto;}
+  .hero-alert,.symptom-visual,.hero-photo-wrap,.price-tiers,.hero-cta,
+  .stats-row,.check-list,.concern-close,.table-note,.section-photo,
+  .reason-photo,.reason-grid,.concern-grid,.who-grid,.compare-list,.step-list,.effect-grid,.case-grid,.table-wrap,
+  .area-list,.area-note,.feature-list,.staff-card,.voice-box,.price-block,.flow-list,.flow-cta,
+  .access-grid,.visit-grid,.access-map,.faq-list,.final-cta,.step-caveat,.case-disclaimer,.review-card{max-width:var(--col);width:100%;margin-inline:auto;}
+  .stat-card{max-width:none;}
+  .step-list,.step-list-4,.access-grid,.visit-grid,.case-grid,.reason-grid{grid-template-columns:1fr;}
+  .reason-photo{padding:8px;}
+  main .wrap > .btn-line{max-width:var(--col)!important;}
+}
 </style>
 </head>
 <body>
