@@ -573,6 +573,23 @@ details.area-item .who-list{padding:0 20px 18px 50px;}
 .price-img{width:100%;max-width:420px;height:auto;display:block;margin:0 auto;}
 .hero-copy-img{width:100%;max-width:480px;height:auto;display:block;margin:0 auto;}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+
+/* ---------- PC表示の横幅を640pxにそろえる（スマホ表示は変更なし） ---------- */
+@media (min-width:700px){
+  :root{--col:640px;}
+  main .wrap,.hero .wrap,.site-header .wrap,.mini-nav .wrap{max-width:var(--col);padding-inline:0;}
+  .top-visual{max-width:var(--col);}
+  .hero .wrap > :not(.visually-hidden){width:100%;}
+  .hero-copy-img,.price-img,.hero-cta,
+  .quiz-card,.stats-row,.check-list,.concern-close,.concern-quote,.table-note,
+  .cause-flow,.step-caveat,.reason-photo,.kids-card,.step-list,.feature-list,
+  .staff-card,.voice-box,.price-block,.flow-list,.flow-cta,
+  .access-grid,.visit-grid,.faq-list,.final-cta{max-width:none;width:100%;margin-inline:0;}
+  .stat-card{max-width:none;}
+  .step-list-4,.access-grid,.visit-grid{grid-template-columns:1fr;}
+  .reason-photo{padding:8px;max-width:var(--col);margin-inline:auto;}
+  .hero-cta .btn,.flow-cta .btn{max-width:none;}
+}
 </style>
 </head>
 <body>
